@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../products';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductAlertsComponent } from './product-alerts.component';
 
 describe('ProductAlertsComponent', () => {
   let component: ProductAlertsComponent;
@@ -25,36 +23,3 @@ describe('ProductAlertsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-
-@Component({
-  selector: 'app-product-alerts',
-  templateUrl: './product-alerts.component.html',
-  styleUrls: ['./product-alerts.component.css']
-})
-export class ProductAlertsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-export class ProductAlertsComponent implements OnInit {
-
-  @Input() product!: Product;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-  ],
